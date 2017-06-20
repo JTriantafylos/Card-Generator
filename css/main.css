@@ -1,0 +1,138 @@
+/* Colors: http://materialuicolors.co */
+/* Backgrounds: http://1366x768wallpaper.com/christmas-wallpapers */
+
+body
+{
+	background-color: #EEEEEE;
+	font-family: 'Dosis', sans-serif;
+}
+
+h1
+{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h2
+{
+	color: #EEEEEE;
+	font-size: 24px;
+}
+
+p
+{
+	font-size: 20px;
+}
+
+input, textarea
+{
+	margin-bottom: 16px;
+}
+
+textarea
+{
+	resize: none;
+}
+
+.button:hover
+{
+	cursor: pointer;
+}
+
+#navbar
+{
+	width: 100%;
+	height: 64px;
+
+	position: fixed;
+	display: inline-flex;
+
+	background-color: #78909C;
+	box-shadow: 0px 4px 6px 5px rgba(0,0,0,0.5);
+}
+
+#navbar *
+{
+	margin: 18px 0px 18px 18px;
+	font-size: 28px;
+	color: #EEEEEE;
+}
+
+#navbar h2
+{
+	margin: 22px 0px 22px 22px;
+	font-size: 20px;
+}
+
+#sidebar
+{
+	height: 100%;
+	width: 20%;
+	left: -20%;
+
+	position: fixed;
+	z-index: -1;
+	padding: 80px 0px;
+	box-sizing: border-box;
+
+	background-color: #607D8B;
+	transition: all 0.4s ease 0s;
+}
+
+#sidebar *
+{
+	padding: 8px 32px;
+	margin-bottom: 8px;
+
+	background-color: #78909C;
+}
+
+
+#sidebar *:hover
+{
+	cursor: pointer;
+
+	background-color: #829aa6;
+}
+
+#content
+{
+	padding: 128px 64px;
+	width: 100%;
+	height: 100%;
+	float: right;
+
+	box-sizing: border-box;
+
+	transition: all 0.4s ease 0s;
+}
+
+#contentLeft {
+	width: 50%;
+	float: left;
+}
+
+#contentRight {
+	width: 50%;
+	float: right;
+}
+
+#cardBuilder
+{
+	visibility: visible;
+}
+
+#cardBuilder *
+{
+	line-height: 150%;
+}
+
+#cardBuilder label
+{
+	font-size: 20px;
+}
+
+#borderThicknessSlider
+{
+	font-size: 16px;
+}

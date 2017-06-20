@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Card Generator">
+		<meta name="keywords" content="Card, Generator, Card Generator, Holiday, Greeting">
+		<meta name="designer" content="James Triantafylos">
+
+		<title>Card Generator</title>
+
+		<link rel="stylesheet" href="css/browser_reset.css" type="text/css" />
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+
+		<!-- Font Awesome Icon Set http://fontawesome.io -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+		<script src="js/main.js"></script>
+	</head>
+
+	<body>
+
+		<div id="navbar">
+			<span class="fa fa-bars fa-2x button" onClick="sidebarExpand()" ></span>
+			<h1>Card Generator</h1>
+			<h2 id="navbarGeneratorLabel">Christmas Card</h2>
+		</div>
+
+		<div id="sidebar">
+			<h2 onclick="switchGenerator(1)">Christmas Card</h2>
+			<h2 onclick="switchGenerator(2)">Birthday Card</h2>
+			<h2 onclick="switchGenerator(3)">Easter Card</h2>
+		</div>
+
+		<div id="content">
+			<div id="cardBuilder">
+				<h1 id="generatorTitle">Christmas Card Generator</h1>
+
+				<form name="cardForm" method="post" onSubmit="return onSubmit()">
+					<div id="contentLeft">
+
+						<p><label for="toName">Who would you like to send your card to?</label></p>
+						<p><input id="toName" name="toNameInput" type="text" placeholder="Card Recipient" autofocus required/></p>
+
+						<p><label for="cardMessage">What message would you like to be on the card?</label></p>
+						<p><textarea id="cardMessage" name="cardMessageInput" placeholder="Card Message" rows="5" cols="50" required></textarea></p>
+
+						<p><label for="textColor">What colour would you like the card's text to be?</label></p>
+						<p><input id="textColor" name="textColorInput" type="color" value="#000000" required/></p>
+
+						<p><label for="textColor">How thick would you like the cards border to be?</label></p>
+						<p id="borderThicknessSlider">Thin <input id="borderThickness" name="borderThicknessInput" type="range" min="1" max="16" required/> Thick</p>
+
+						<p><label for="borderColor">What colour would you like the card's border to be?</label></p>
+						<p><input id="borderColor" name="borderColorInput" type="color" value="#ffffff" required/></p>
+
+						<p>
+							<input class="button" type="submit" value="Generate Card"/>
+							<input class="button" type="reset" value="Reset"/>
+						</p>
+					</div>
+
+					<div id="contentRight">
+						<p><label for="fromName">Who would you like this card to be from?</label></p>
+						<p><input id="fromName" name="fromNameInput" type="text" placeholder="Card Sender" required/></p>
+						<p>Please choose a  background:</p>
+							<label for="bgChoice1"><img id="bgChoicePreview1" src="images/backgrounds/bgChristmas1.jpg" alt="Christmas Background 1" width="250px"></label>
+							<input id="bgChoice1" name="userBGChoice" value="christmasBG1" type="radio" required/>
+						</p>
+						<p>
+							<label for="bgChoice2"><img id="bgChoicePreview2" src="images/backgrounds/bgChristmas2.jpg" alt="Christmas Background 2" width="250px"></label>
+							<input id="bgChoice2" name="userBGChoice" value="christmasBG2" type="radio"/>
+						</p>
+						<p>
+							<label for="bgChoice3"><img id="bgChoicePreview3" src="images/backgrounds/bgChristmas3.jpg" alt="Christmas Background 3" width="250px"></label>
+							<input id="bgChoice3" name="userBGChoice" value="christmasBG3" type="radio"/>
+						</p>
+
+						<div id="recipientAgeChoice">
+							<p><label for="recipientAge">How old is the recipient turning?</label></p>
+							<p><input id="recipientAge" name="recipientAgeInput" type="number" min="0" max="100" value="0" required/></p>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>
